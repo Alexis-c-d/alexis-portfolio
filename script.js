@@ -31,8 +31,14 @@ const hero = document.querySelector(".hero");
 if (heroPortrait && pageRamp && hero) {
   const alignPageRamp = () => {
     const portrait = heroPortrait.getBoundingClientRect();
-    const portraitMidpoint = portrait.top + portrait.height * 0.5;
-    pageRamp.style.height = `${Math.ceil(portraitMidpoint + window.scrollY)}px`;
+    const portraitMidpoint = portrait.top + window.scrollY + portrait.height * 0.5;
+    const portraitBottom = portrait.bottom + window.scrollY;
+    const startX = window.innerWidth * 0.18;
+    const midpointX = window.innerWidth * 0.5;
+    const endpointX = startX + (midpointX - startX) * (portraitBottom / portraitMidpoint);
+
+    pageRamp.style.height = `${Math.ceil(portraitBottom)}px`;
+    pageRamp.style.setProperty("--ramp-end-x", `${endpointX}px`);
   };
 
   alignPageRamp();
