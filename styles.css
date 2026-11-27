@@ -51,8 +51,12 @@ h1, h2, h3, p { margin-top: 0; }
 .orbit-one { width: 42%; aspect-ratio: 1; }
 .orbit-two { width: 68%; aspect-ratio: 1; border-style: dashed; }
 .orbit-three { width: 90%; aspect-ratio: 1; border-color: #30282b; }
-.orbit-core { z-index: 1; width: 40%; aspect-ratio: 1; overflow: hidden; border: 2px solid #6b3339; border-radius: 50%; background: var(--accent-wash); box-shadow: 0 10px 50px #e3454b30; }
-.orbit-core img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.orbit-core { position: relative; z-index: 1; width: 50%; aspect-ratio: 1; display: grid; place-items: center; isolation: isolate; }
+.orbit-core::before, .orbit-core::after { position: absolute; content: ""; pointer-events: none; }
+.orbit-core::before { z-index: -1; inset: -13%; border: 1px solid #55bdc8; clip-path: polygon(18% 0, 82% 0, 100% 18%, 100% 82%, 82% 100%, 18% 100%, 0 82%, 0 18%); transform: rotate(45deg); }
+.orbit-core::after { z-index: 1; inset: -6%; border: 1px solid var(--accent); clip-path: polygon(18% 0, 82% 0, 100% 18%, 100% 82%, 82% 100%, 18% 100%, 0 82%, 0 18%); }
+.portrait-frame { width: 100%; height: 100%; padding: 5px; background: linear-gradient(135deg, #55bdc8, var(--accent) 48%, #55bdc8); clip-path: polygon(18% 0, 82% 0, 100% 18%, 100% 82%, 82% 100%, 18% 100%, 0 82%, 0 18%); filter: drop-shadow(0 10px 24px #e3454b30); }
+.portrait-frame img { display: block; width: 100%; height: 100%; clip-path: polygon(18% 0, 82% 0, 100% 18%, 100% 82%, 82% 100%, 18% 100%, 0 82%, 0 18%); object-fit: cover; object-position: center; }
 .art-caption { position: absolute; color: #a6999c; font: 500 .55rem var(--mono); letter-spacing: .12em; }
 .art-caption-top { top: 5%; right: 4%; }
 .art-caption-bottom { bottom: 6%; left: 3%; }
@@ -151,7 +155,6 @@ h1, h2, h3, p { margin-top: 0; }
   .hero h1 { font-size: clamp(3.45rem, 12vw, 5.2rem); }
   .hero-intro { max-width: 390px; font-size: 1rem; }
   .hero-art { width: min(78vw, 340px); margin: 3rem auto 0; justify-self: center; }
-  .orbit-core > span { font-size: 2.2rem; }
   .scroll-cue { bottom: 1.5rem; }
   .section-block { padding-top: 5rem; padding-bottom: 5rem; }
   .about-content, .focus-layout { grid-template-columns: 1fr; gap: 1.8rem; }
