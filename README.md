@@ -14,8 +14,8 @@ Then visit `http://localhost:8000`.
 
 ## Portfolio content
 
-- Featured projects link to their source repositories: [Rocky Pentapod Robot](https://github.com/Alexis-c-d/rocky-pentapod-robot), [UE5 Digital Twin Research](https://github.com/Alexis-c-d/ue5-digital-twin-research), and [Emergency BPM Beacon](https://github.com/Alexis-c-d/emergency-bpm-beacon).
-- The Rocky prototype photo is from the Rocky project repository. The other project cards use CSS illustrations, labeled as illustrative rather than project screenshots.
+- Each rounded project card is a single link to its source repository: [Rocky Pentapod Robot](https://github.com/Alexis-c-d/rocky-pentapod-robot), [UE5 Digital Twin Research](https://github.com/Alexis-c-d/ue5-digital-twin-research), and [Emergency BPM Beacon](https://github.com/Alexis-c-d/emergency-bpm-beacon).
+- The Rocky prototype photo (`assets/rocky-build.jpg`) is from the Rocky project repository. The UE5 Digital Twin Research and Emergency BPM Beacon repositories do not currently contain project photos or screenshots, so their cards identify the missing imagery rather than showing illustrations.
 - The resume section embeds `assets/Luis-Alexis-Calvillo-Deveze-Resume.pdf`, sourced from [Alexis_Calvillo_Resume](https://github.com/Alexis-c-d/Alexis_Calvillo_Resume). Replace this local PDF when publishing an updated resume.
 
 ## Deploy to GitHub Pages
