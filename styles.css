@@ -21,11 +21,11 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
 .skip-link { position: absolute; z-index: 20; top: .75rem; left: .75rem; padding: .8rem 1rem; transform: translateY(-160%); background: var(--ink); color: var(--paper); }
 .skip-link:focus { transform: translateY(0); }
 .page-ramp { position: absolute; z-index: -1; top: 0; left: 0; width: 100%; height: 0; overflow: hidden; pointer-events: none; }
-.page-ramp::before { position: absolute; inset: 0; background: linear-gradient(155deg, #ff5b6118 4%, #a92d3725 58%, #30191c12 100%); clip-path: polygon(18% 0, 100% 0, 100% 100%); content: ""; }
+.page-ramp::before { position: absolute; inset: 0; background: linear-gradient(155deg, #ff5b6118 4%, #a92d3725 58%, #30191c12 100%); clip-path: polygon(18% 0, 72% 0, 72% 100%); content: ""; }
 .page-ramp::after { position: absolute; inset: 0 auto 0 0; width: 1px; background: linear-gradient(180deg, #ff5b61a0, #a92d3740); content: ""; }
 .site-header { position: relative; z-index: 5; height: 5.5rem; max-width: 1280px; margin: auto; padding: 0 4.5rem; display: flex; justify-content: space-between; align-items: center; }
 .wordmark { font-size: 1.65rem; font-weight: 700; letter-spacing: -.09em; text-decoration: none; }
-.site-header .wordmark { margin-left: -.75rem; font-size: 2rem; }
+.site-header .wordmark { margin-left: -3rem; font-size: 2.8rem; }
 .wordmark span { color: var(--accent); }
 .site-nav { display: flex; align-items: center; gap: 2.2rem; }
 .site-nav a, .footer-link { color: var(--muted); font-size: .85rem; text-decoration: none; transition: color .2s ease; }
@@ -142,7 +142,7 @@ h1, h2, h3, p { margin-top: 0; }
 }
 @media (max-width: 760px) {
   .site-header { height: 4.7rem; padding-inline: 1.5rem; }
-  .site-header .wordmark { margin-left: -.4rem; font-size: 1.8rem; }
+  .site-header .wordmark { margin-left: -1.5rem; font-size: 2.25rem; }
   .menu-toggle { z-index: 5; display: flex; align-items: center; gap: .7rem; padding: .6rem 0 .6rem .6rem; border: 0; background: transparent; color: var(--ink); font: 500 .75rem var(--sans); cursor: pointer; }
   .menu-icon { width: 1.2rem; display: grid; gap: 5px; }
   .menu-icon span { height: 1px; background: var(--ink); transition: transform .2s ease; }
