@@ -47,18 +47,18 @@ h1, h2, h3, p { margin-top: 0; }
 .hero-location { margin: 2.2rem 0 0; color: #8f898c; font: .64rem var(--mono); letter-spacing: .015em; }
 .hero-location span { padding-inline: .4rem; color: var(--accent); }
 .hero-art { position: relative; isolation: isolate; width: min(100%, 470px); aspect-ratio: 1; justify-self: end; }
-.cascade-backdrop { position: absolute; z-index: 0; inset: 0; overflow: hidden; }
-.cascade-backdrop::before { position: absolute; inset: 0; background: linear-gradient(160deg, #ff5b6130 8%, #a92d371c 62%, transparent 100%); clip-path: polygon(56% 0, 100% 0, 100% 100%, 8% 100%, 28% 60%); content: ""; }
-.hero-portrait { position: absolute; z-index: 1; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 16px 22px #00000032); }
-.data-cascade { position: absolute; z-index: 2; inset: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; }
+.cascade-backdrop { position: absolute; z-index: 0; inset: -4% -20% 0 -12%; overflow: hidden; }
+.cascade-backdrop::before { position: absolute; inset: 0; background: linear-gradient(155deg, #ff5b6140 4%, #a92d372d 58%, #30191c16 100%); clip-path: polygon(34% 0, 100% 0, 100% 100%, 0 100%, 18% 58%); content: ""; }
+.data-cascade { position: absolute; z-index: 0; inset: 0 -16% 0 -12%; width: 128%; height: 100%; overflow: hidden; pointer-events: none; }
 .cascade-stream, .cascade-packet { fill: none; stroke: var(--accent); stroke-linecap: square; stroke-linejoin: bevel; }
-.cascade-stream { stroke-width: 1.5; opacity: .7; }
-.cascade-stream-secondary { stroke-width: 1; opacity: .42; }
-.cascade-stream-faint { stroke-width: .8; opacity: .24; }
+.cascade-stream { stroke-width: 1.5; opacity: .68; }
+.cascade-stream-secondary { stroke-width: 1; opacity: .48; }
+.cascade-stream-faint { stroke-width: .8; opacity: .3; }
 .cascade-packet { stroke-width: 2.5; opacity: .72; }
 .cascade-endpoint { fill: var(--accent); opacity: .9; }
 .cascade-endpoint-secondary { opacity: .58; }
 .cascade-endpoint-faint { opacity: .38; }
+.hero-portrait { position: absolute; z-index: 1; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 16px 22px #00000032); }
 .art-caption { position: absolute; z-index: 3; color: #a6999c; font: 500 .55rem var(--mono); letter-spacing: .12em; }
 .art-caption-top { top: 4%; right: 3%; }
 .art-caption-bottom { bottom: 3%; left: 4%; }
@@ -154,6 +154,8 @@ h1, h2, h3, p { margin-top: 0; }
   .hero h1 { font-size: clamp(3.45rem, 12vw, 5.2rem); }
   .hero-intro { max-width: 390px; font-size: 1rem; }
   .hero-art { width: min(88vw, 410px); max-width: 100%; margin: 3rem auto 0; justify-self: center; }
+  .cascade-backdrop { inset: -2% -2% 0 -2%; }
+  .data-cascade { inset: 0; width: 100%; }
   .scroll-cue { bottom: 1.5rem; }
   .section-block { padding-top: 5rem; padding-bottom: 5rem; }
   .about-content, .focus-layout { grid-template-columns: 1fr; gap: 1.8rem; }
