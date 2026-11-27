@@ -31,8 +31,8 @@ const hero = document.querySelector(".hero");
 if (heroPortrait && pageRamp && hero) {
   const alignPageRamp = () => {
     const portrait = heroPortrait.getBoundingClientRect();
-    const collarMidpoint = portrait.top + portrait.height * 0.82;
-    pageRamp.style.height = `${Math.ceil(collarMidpoint + window.scrollY)}px`;
+    const portraitMidpoint = portrait.top + portrait.height * 0.5;
+    pageRamp.style.height = `${Math.ceil(portraitMidpoint + window.scrollY)}px`;
   };
 
   alignPageRamp();
