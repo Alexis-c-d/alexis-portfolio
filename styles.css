@@ -46,23 +46,22 @@ h1, h2, h3, p { margin-top: 0; }
 .text-link:hover { color: var(--accent); }
 .hero-location { margin: 2.2rem 0 0; color: #8f898c; font: .64rem var(--mono); letter-spacing: .015em; }
 .hero-location span { padding-inline: .4rem; color: var(--accent); }
-.hero-art { position: relative; width: min(100%, 400px); aspect-ratio: 1; justify-self: end; display: grid; place-items: center; }
-.orbit { position: absolute; border: 1px solid #49373a; border-radius: 50%; }
-.orbit-one { width: 42%; aspect-ratio: 1; }
-.orbit-two { width: 68%; aspect-ratio: 1; border-style: dashed; }
-.orbit-three { width: 90%; aspect-ratio: 1; border-color: #30282b; }
-.orbit-core { position: relative; z-index: 1; width: 50%; aspect-ratio: 1; display: grid; place-items: center; isolation: isolate; }
-.orbit-core::before, .orbit-core::after { position: absolute; content: ""; pointer-events: none; }
-.orbit-core::before { z-index: -1; inset: -13%; border: 1px solid #55bdc8; clip-path: polygon(18% 0, 82% 0, 100% 18%, 100% 82%, 82% 100%, 18% 100%, 0 82%, 0 18%); transform: rotate(45deg); }
-.orbit-core::after { z-index: 1; inset: -6%; border: 1px solid var(--accent); clip-path: polygon(18% 0, 82% 0, 100% 18%, 100% 82%, 82% 100%, 18% 100%, 0 82%, 0 18%); }
-.portrait-frame { width: 100%; height: 100%; padding: 5px; background: linear-gradient(135deg, #55bdc8, var(--accent) 48%, #55bdc8); clip-path: polygon(18% 0, 82% 0, 100% 18%, 100% 82%, 82% 100%, 18% 100%, 0 82%, 0 18%); filter: drop-shadow(0 10px 24px #e3454b30); }
-.portrait-frame img { display: block; width: 100%; height: 100%; clip-path: polygon(18% 0, 82% 0, 100% 18%, 100% 82%, 82% 100%, 18% 100%, 0 82%, 0 18%); object-fit: cover; object-position: center; }
-.art-caption { position: absolute; color: #a6999c; font: 500 .55rem var(--mono); letter-spacing: .12em; }
-.art-caption-top { top: 5%; right: 4%; }
-.art-caption-bottom { bottom: 6%; left: 3%; }
-.art-star { position: absolute; color: var(--accent); font-size: 1.1rem; }
-.art-star-one { top: 26%; left: 12%; }
-.art-star-two { right: 10%; bottom: 23%; font-size: .8rem; }
+.hero-art { position: relative; isolation: isolate; width: min(100%, 470px); aspect-ratio: 1; justify-self: end; }
+.cascade-backdrop { position: absolute; z-index: 0; inset: 0; overflow: hidden; }
+.cascade-backdrop::before { position: absolute; inset: 0; background: linear-gradient(160deg, #ff5b6130 8%, #a92d371c 62%, transparent 100%); clip-path: polygon(56% 0, 100% 0, 100% 100%, 8% 100%, 28% 60%); content: ""; }
+.hero-portrait { position: absolute; z-index: 1; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 16px 22px #00000032); }
+.data-cascade { position: absolute; z-index: 2; inset: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; }
+.cascade-stream, .cascade-packet { fill: none; stroke: var(--accent); stroke-linecap: square; stroke-linejoin: bevel; }
+.cascade-stream { stroke-width: 1.5; opacity: .7; }
+.cascade-stream-secondary { stroke-width: 1; opacity: .42; }
+.cascade-stream-faint { stroke-width: .8; opacity: .24; }
+.cascade-packet { stroke-width: 2.5; opacity: .72; }
+.cascade-endpoint { fill: var(--accent); opacity: .9; }
+.cascade-endpoint-secondary { opacity: .58; }
+.cascade-endpoint-faint { opacity: .38; }
+.art-caption { position: absolute; z-index: 3; color: #a6999c; font: 500 .55rem var(--mono); letter-spacing: .12em; }
+.art-caption-top { top: 4%; right: 3%; }
+.art-caption-bottom { bottom: 3%; left: 4%; }
 .scroll-cue { position: absolute; bottom: 2.2rem; left: 0; color: #918a8d; font: 400 .6rem var(--mono); letter-spacing: .1em; text-decoration: none; }
 .scroll-cue span { margin-right: .7rem; color: var(--accent); font-size: .9rem; }
 .section-block { padding-top: 7.5rem; padding-bottom: 7.5rem; }
@@ -154,7 +153,7 @@ h1, h2, h3, p { margin-top: 0; }
   .hero { min-height: auto; padding-top: 5.5rem; padding-bottom: 6rem; grid-template-columns: 1fr; }
   .hero h1 { font-size: clamp(3.45rem, 12vw, 5.2rem); }
   .hero-intro { max-width: 390px; font-size: 1rem; }
-  .hero-art { width: min(78vw, 340px); margin: 3rem auto 0; justify-self: center; }
+  .hero-art { width: min(88vw, 410px); max-width: 100%; margin: 3rem auto 0; justify-self: center; }
   .scroll-cue { bottom: 1.5rem; }
   .section-block { padding-top: 5rem; padding-bottom: 5rem; }
   .about-content, .focus-layout { grid-template-columns: 1fr; gap: 1.8rem; }
