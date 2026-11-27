@@ -14,4 +14,12 @@ siteNav.addEventListener("click", (event) => {
   }
 });
 
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+    menuToggle.setAttribute("aria-expanded", "false");
+    siteNav.classList.remove("is-open");
+    menuToggle.focus();
+  }
+});
+
 document.querySelector("#year").textContent = new Date().getFullYear();
