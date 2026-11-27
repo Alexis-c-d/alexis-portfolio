@@ -23,3 +23,22 @@ document.addEventListener("keydown", (event) => {
 });
 
 document.querySelector("#year").textContent = new Date().getFullYear();
+
+const heroPortrait = document.querySelector(".hero-portrait");
+const pageRamp = document.querySelector(".page-ramp");
+const hero = document.querySelector(".hero");
+
+if (heroPortrait && pageRamp && hero) {
+  const alignPageRamp = () => {
+    pageRamp.style.height = `${Math.ceil(heroPortrait.getBoundingClientRect().bottom + window.scrollY)}px`;
+  };
+
+  alignPageRamp();
+  heroPortrait.addEventListener("load", alignPageRamp, { once: true });
+  window.addEventListener("resize", alignPageRamp, { passive: true });
+
+  const rampObserver = new ResizeObserver(alignPageRamp);
+  rampObserver.observe(heroPortrait);
+  rampObserver.observe(hero);
+  document.fonts.ready.then(alignPageRamp);
+}
