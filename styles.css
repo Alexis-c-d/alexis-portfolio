@@ -25,6 +25,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
 .page-ramp::after { position: absolute; inset: 0 auto 0 0; width: 1px; background: linear-gradient(180deg, #ff5b61a0, #a92d3740); content: ""; }
 .site-header { position: relative; z-index: 5; height: 5.5rem; max-width: 1280px; margin: auto; padding: 0 4.5rem; display: flex; justify-content: space-between; align-items: center; }
 .wordmark { font-size: 1.65rem; font-weight: 700; letter-spacing: -.09em; text-decoration: none; }
+.site-header .wordmark { margin-left: -.75rem; font-size: 2rem; }
 .wordmark span { color: var(--accent); }
 .site-nav { display: flex; align-items: center; gap: 2.2rem; }
 .site-nav a, .footer-link { color: var(--muted); font-size: .85rem; text-decoration: none; transition: color .2s ease; }
@@ -141,6 +142,7 @@ h1, h2, h3, p { margin-top: 0; }
 }
 @media (max-width: 760px) {
   .site-header { height: 4.7rem; padding-inline: 1.5rem; }
+  .site-header .wordmark { margin-left: -.4rem; font-size: 1.8rem; }
   .menu-toggle { z-index: 5; display: flex; align-items: center; gap: .7rem; padding: .6rem 0 .6rem .6rem; border: 0; background: transparent; color: var(--ink); font: 500 .75rem var(--sans); cursor: pointer; }
   .menu-icon { width: 1.2rem; display: grid; gap: 5px; }
   .menu-icon span { height: 1px; background: var(--ink); transition: transform .2s ease; }
